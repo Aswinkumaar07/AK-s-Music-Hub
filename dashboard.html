@@ -1,0 +1,241 @@
+<style>
+    /* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #070707; /* Dark background */
+    color: white;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff0000; /* YouTube Red */
+    margin-bottom: 10px;
+}
+
+/* The Grid Layout */
+.music-container {
+    display: grid;
+    /* This creates as many columns as fit, minimum 200px wide */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The Card */
+.music-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-5px);
+    background-color: #2a2a2a;
+}
+
+/* The Image Container (The Magic Part) */
+.img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces a square shape */
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #333; /* Backup color while loading */
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops any image to fit the square without stretching */
+}
+
+/* Content inside the card */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows this area to fill space so buttons align */
+}
+
+.music-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+    /* If text is too long, it adds "..." instead of breaking the box */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-card p {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* The Button */
+.play-link {
+    margin-top: auto; /* Pushes the button to the very bottom of the card */
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.play-link:hover {
+    background-color: #cc0000;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK's Music Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎵 AK's Music Hub</h1>
+        <p>Click play to watch on YouTube</p>
+    </header>
+
+    <div class="music-container">
+        
+        <div class="music-card">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Midnight City</h3>
+                <p>M83</p>
+                <a href="https://www.youtube.com/watch?v=dX3k_QDnzHE&list=RDdX3k_QDnzHE&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Blinding Lights</h3>
+                <p>The Weeknd</p>
+                <a href="https://www.youtube.com/watch?v=4NRXx6U8ABQ&list=RD4NRXx6U8ABQ&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=400&h=800&fit=crop" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Starboy</h3>
+                <p>Daft Punk Ft. Weeknd</p>
+                <a href="https://www.youtube.com/watch?v=34Na4j8AVgA&list=RD34Na4j8AVgA&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s1.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Pirai Thedum</h3>
+                <p>Saindhavi, G.V. Prakash </p>
+                <a href="https://www.youtube.com/watch?v=a7rCc_oMUhI&list=RDa7rCc_oMUhI&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s2.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Senjitaley</h3>
+                <p>Anirudh Ravichander </p>
+                <a href="https://www.youtube.com/watch?v=EThWWliR63w&list=RDEThWWliR63w&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s4.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>OMG Ponnu</h3>
+                <p>Sid Sriram OMG Ponnu </p>
+                <a href="https://www.youtube.com/watch?v=kBc4CvJKpEE&list=RDkBc4CvJKpEE&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s5.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Mazhai Kuruvi</h3>
+                <p>A. R. Rahman Mazhai Kuruvi</p>
+                <a href="https://www.youtube.com/watch?v=bt4-FwVe1Fk&list=RDbt4-FwVe1Fk&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s6.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3> Orasaadha</h3>
+                <p>vivek Siva Orasaadha </p>
+                <a href="https://www.youtube.com/watch?v=93Y_eCwdR5k&list=RD93Y_eCwdR5k&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s7.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Bodhai Kaname</h3>
+                <p>Anirudh Ravichander  </p>
+                <a href="https://www.youtube.com/watch?v=jxSo0EE-D2c&list=RDjxSo0EE-D2c&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="img-container">
+                <img src="s8.png" alt="Song Cover">
+            </div>
+            <div class="card-content">
+                <h3>Bae</h3>
+                <p>Adithya & Anirudh ravichander </p>
+                <a href="https://www.youtube.com/watch?v=-7n_krPLRgs&list=RD-7n_krPLRgs&start_radio=1" target="_blank" class="play-link">▶ Play Now</a>
+            </div>
+        </div>
+
+
+        
+
+    </div>
+
+</body>
+</html>
